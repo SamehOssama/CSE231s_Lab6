@@ -24,11 +24,11 @@ There are 2 approaches to solve this assignment, The first approach is to parse 
 The code consists of 10 files:
 |File Name|Description|
 | -----------|-----------|
-|[ArxmlParser.java](#ArxmlParser.java)|Contains the solution for the XML document approach.|
-|[ArxmlSolver.java](#ArxmlSolver.java)|Contains the solution for the string approach.|
+|[ArxmlParser.java](#arxmlparserjava)|Contains the solution for the XML document approach.|
+|[ArxmlSolver.java](#arxmlsolverjava)|Contains the solution for the string approach.|
 |NotVaildAutosarFileException.java|Checked exception for wrong extension files.|
 |EmptyAutosarFileException.java|Unchecked exception for empty files|
-|[start.bat](#start.bat)|Contains the batch code that runs the program in its 3 test cases.|
+|[start.bat](#startbat)|Contains the batch code that runs the program in its 3 test cases.|
 |[test.arxml](#test_in)|Contains the test input for the program.|
 |[test_mod.arxml](#test_out)|The file that gets created with the sorted data.|
 |wrong.aml|The test file with the wrong extension.|
@@ -70,9 +70,9 @@ java ApArxmlParserp empty.arxml
 
 ## Example test cases:
 
-### <a name="correct_test"></a> Test case 1 (correct file):
+### <a name="correct_test"></a>Test case 1 (correct file):
 
-#### <a name="test_in"></a> test.arxml (**Input**)
+#### <a name="test_in"></a>test.arxml (**Input**)
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <AUTOSAR>
@@ -91,7 +91,7 @@ java ApArxmlParserp empty.arxml
 </AUTOSAR>
 ```
 
-#### <a name="test_out"></a> test_mod.arxml (**Output**)
+#### <a name="test_out"></a>test_mod.arxml (**Output**)
 The bash output:
 
 ```
@@ -117,9 +117,9 @@ The modified file's content:
 </AUTOSAR>
 ```
 
-### <a name="wrong_test"></a> Test case 2 (wrong extension):
+### <a name="wrong_test"></a>Test case 2 (wrong extension):
 
-#### <a name="wrong"></a> wrong.aml (**Input**)
+#### <a name="wrong"></a>wrong.aml (**Input**)
 This file has the same content of [test.arxml](test_in).
 
 #### CMD output:
@@ -129,9 +129,9 @@ NotVaildAutosarFileException
         at ArxmlParser.main(ArxmlParser.java:33)
 ```
 
-### <a name="empty_test"></a> Test case 3 (empty file):
+### <a name="empty_test"></a>Test case 3 (empty file):
 
-#### <a name="empty"></a> empty.arxml (**Input**)
+#### <a name="empty"></a>empty.arxml (**Input**)
 This file is empty.
 
 #### CMD output:
