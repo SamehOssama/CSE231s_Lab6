@@ -1,6 +1,6 @@
 # CSE231s: Advanced Computer Programming
 ## Exception handling assignment
-Write a program that reads an ARXML file containing a list of containers, each with a unique ID, and reorders the containers alphabetically by their name sub- container “"SHORT-NAME".
+Write a program that reads an ARXML file containing a list of containers, each with a unique ID, and reorders the containers alphabetically by their name sub- container "SHORT-NAME".
 
 The program should write the reordered containers to a new ARXML file.
 
@@ -38,18 +38,20 @@ The code consists of 10 files:
 ### ArxmlParser.java
 The first approach is the `DOM` parser library from `w3c`.
 The code does the following:
-1) Load the `.arxml` file in memory as a document object which contains `container` nodes.
-2) Get the `container` nodes inside an array and sort them based on their `SHORT-NAME` tag content.
-3) Create a new document object and append to it the root `AUTOSAR` node then the sorted container nodes get appended to it.
-4) Create a new `.arxml` file with the new document object.
+1) Check if the file is of a worng extension, then throw `NotVaildAutosarFileException`. If it is empty, then throw `EmptyAutosarFileException`.
+2) Load the `.arxml` file in memory as a document object which contains `container` nodes.
+3) Get the `container` nodes inside an array and sort them based on their `SHORT-NAME` tag content.
+4) Create a new document object and append to it the root `AUTOSAR` node then the sorted container nodes get appended to it.
+5) Create a new `.arxml` file with the new document object.
 
 ### ArxmlSolver.java
 The second approach is to get the input as string: 
 The code does the following:
-1) Convert the file to a string.
-2) Get the container attributes in a 2D array where each container is the row and the attribute values as an array `["SHORT-NAME", "UUID", "LONG-NAME"]`.
-3) Sort the container array by the `"SHORT-NAME"` attribute.
-4) Replace the old values in the file string and output the string to the file.
+1) Check if the file is of a worng extension, then throw `NotVaildAutosarFileException`. If it is empty, then throw `EmptyAutosarFileException`.
+2) Convert the file to a string.
+3) Get the container attributes in a 2D array where each container is the row and the attribute values as an array `["SHORT-NAME", "UUID", "LONG-NAME"]`.
+4) Sort the container array by the `"SHORT-NAME"` attribute.
+5) Replace the old values in the file string and output the string to the file.
 
 ### start.bat
 The batch file which compiles and runs the program. It performs 3 test cases:
